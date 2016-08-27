@@ -1,0 +1,29 @@
+
+.site-footer {
+	padding-top: 30px;
+	text-align: center;
+	color: #fff;
+	letter-spacing: 1px;
+	padding-bottom: 2em;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+
+	a {
+		color: #fff;
+	}
+}
+
+
+.footer-navigation {
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	width: 500px;
+
+	li {
+		padding: 5px 0;
+		list-style: none;
+	}
+}
