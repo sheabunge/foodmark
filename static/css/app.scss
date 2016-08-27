@@ -1,11 +1,13 @@
 
 @import 'normalize';
+@import 'variables';
+
 @import 'elements';
 @import 'typography';
 
-@import 'components/_header.css';
-@import 'components/_footer.css';
-@import 'components/_navigation.css';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/navigation';
 
 *, *::before, *::after {
 	box-sizing: border-box;

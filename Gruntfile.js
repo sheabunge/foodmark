@@ -18,19 +18,31 @@ module.exports = function(grunt) {
 			}
 		},
 
+		sass: {
+			options: {
+				sourceMap: true
+			},
+			dist: {
+				expand: true,
+				cwd: 'static/css',
+				src: '*.scss',
+				dest: 'static/dist',
+				ext: '.css'
+			}
+		},
+
 		postcss: {
 			options: {
 				map: true,
 				processors: [
-					require('precss')(),
 					require('autoprefixer')(),
 					require('cssnano')()
 				]
 			},
 			dist: {
 				expand: true,
-				cwd: 'static/css',
-				src: ['*.css', '!_*.css'],
+				cwd: 'static/dist',
+				src: '*.css',
 				dest: 'static/dist',
 				ext: '.css'
 			}
@@ -48,7 +60,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'static/dist/app.js': [
-						'static/js/geo.js'
+						'static/js/night-mode.js'
 					],
 					'static/dist/maps.js': 'static/js/maps.js'
 				}
@@ -63,7 +75,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('css', ['postcss']);
+	grunt.registerTask('css', ['sass', 'postcss']);
 	grunt.registerTask('js', ['jshint', 'uglify']);
 	grunt.registerTask('default', ['clean', 'css', 'js']);
 };
