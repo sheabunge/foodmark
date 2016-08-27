@@ -15,17 +15,15 @@
 	<h1 class="page-title">Dashboard</h1>
 
 	<div class="dashboard">
+	{% for label, icon, url in widgets %}
 
-		{% for label, icon, url in widgets %}
+		<a href="/{{ url }}">
+			<img src="/static/images/dashboard-icons/{{ icon }}.svg" alt="{{ label }} icon">
+			<h2>{{ label }}</h2>
+		</a>
 
-			<a href="/{{ url }}">
-				<img src="/static/images/dashboard-icons/{{ icon }}.svg" alt="{{ label }} icon">
-				<h2>{{ label }}</h2>
-			</a>
-
-		{% endfor %}
-
-	</div>
+	{% endfor %}
+	<div>
 
 </main>
 

@@ -34,3 +34,7 @@ main {
     }
 }
 
+#map {
+    margin-top: 2em;
+    height: 500px;
+}

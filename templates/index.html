@@ -13,18 +13,61 @@
 <main>
 
 <form class="search" method="get" action="/search">
-	<input type="text" placeholder="I would like &hellip;" name="search" value="{% if query %}{{ query }}{% endif %}">
+	<input type="text" placeholder="What are you looking for?" name="search" value="{% if query %}{{ query }}{% endif %}">
 	<button type="submit"><span class="fa fa-search"></span></button>
 </form>
 
-<section>
-
-
-</section>
+<div id="map"></div>
 
 </main>
 
 {% include 'partials/footer.html' %}
+
+{#<script src="/static/dist/maps.js"></script>#}
+<script>
+
+    var initMap = function () {
+
+      var location = { lat: -42.881973, lng: 147.3281693 };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 18,
+        center: location
+      });
+
+      // This event listener calls addMarker() when the map is clicked.
+      google.maps.event.addListener(map, 'click', function(event) {
+        addMarker(event.latLng, map);
+      });
+
+      // Add a marker at the center of the map.
+      addMarker(location, map);
+    };
+
+    // Adds a marker to the map.
+    var addMarker = function (location, map) {
+	    var markerSize = 64;
+
+        var markerIcon = {
+	        url: '/static/images/mark.svg',
+	        size: new google.maps.Size(markerSize, markerSize),
+	        origin: new google.maps.Point(0, 0),
+	        anchor: new google.maps.Point(markerSize/2, markerSize/2)
+	    };
+
+        // Add the marker at the clicked location, and add the next-available label
+        // from the array of alphabetical characters.
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: markerIcon
+        });
+
+        google.maps.event.addListener(marker, 'click', function (event) {
+            window.location.href = '/marker/' + marker.label;
+        });
+    };
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdZq4vEzSZVG8cnxj5TKSNyHBco6GLdrI&amp;callback=initMap"></script>
 
 </body>
 </html>
