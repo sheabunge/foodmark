@@ -12,16 +12,16 @@
 
 <main>
 
-	<h1 class="page-header">Dashboard</h1>
+	<h1 class="page-title">Dashboard</h1>
 
 	<div class="dashboard">
 
 		{% for label, icon, url in widgets %}
 
-			<div>
-				<img src="/static/images/{{ icon }}.svg" alt="{{ label }} icon">
+			<a href="/{{ url }}">
+				<img src="/static/images/dashboard-icons/{{ icon }}.svg" alt="{{ label }} icon">
 				<h2>{{ label }}</h2>
-			</div>
+			</a>
 
 		{% endfor %}
 

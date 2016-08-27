@@ -1,26 +1,15 @@
-
-.site-header a {
-	display: inline-block;
-}
-
-
-.site-logo {
-	color: #fff;
-	display: inline-block;
-}
-
-.site-header a {
-	color: #fff;
-}
-
 .navigation {
+
+	a {
+		color: $color__text-main;
+	}
+
 	ul {
 		text-align: left;
 		display: inline;
 		margin: 0;
 		padding: 15px 4px 17px 0;
 		list-style: none;
-		background-color: #009f6a;
 	}
 
 	ul li {
@@ -54,20 +43,5 @@
 	ul li ul li {
 		display: block;
 		text-align: left;
-	}
-}
-
-.site-header .navigation {
-	a {
-		font-family: Overlock, sans-serif;
-		font-size: 1.2rem;
-	}
-
-	a:hover {
-		color: #004f35;
-	}
-
-	.fa {
-		vertical-align: baseline;
 	}
 }

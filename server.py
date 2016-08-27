@@ -69,9 +69,9 @@ if __name__ == '__main__':
 	server = Server()
 	server.register(r'/', index_handler)
 
-	server.register(r'/produce/search', search_handler)
-	server.register(r'/produce/(\d+)', produce_handler)
+	server.register(r'/produce/search/?', search_handler)
+	server.register(r'/produce/(\d+)/?', produce_handler)
 
-	server.register(r'/account/dashboard', dashboard_handler)
+	server.register(r'/account/dashboard/?', dashboard_handler)
 	server.register(r'/.*', error_handler)
 	server.run()

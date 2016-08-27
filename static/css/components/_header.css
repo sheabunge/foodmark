@@ -1,0 +1,35 @@
+
+.site-header {
+	padding-top: 1em;
+	font-size: 1.6rem;
+}
+
+.site-header a {
+	display: inline-block;
+}
+
+.site-header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	margin-bottom: 20px;
+}
+
+.site-logo {
+	display: inline-block;
+}
+
+.site-header .navigation {
+	a {
+		font-family: Overlock, sans-serif;
+	}
+
+	a:hover {
+		color: #004f35;
+	}
+
+	.fa {
+		vertical-align: baseline;
+	}
+}
