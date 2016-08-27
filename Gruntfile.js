@@ -9,7 +9,12 @@ module.exports = function(grunt) {
 
 			css: {
 				files: ['static/css/**/*.css'],
-				tasks: ['postcss']
+				tasks: ['css']
+			},
+
+			js: {
+				files: ['static/js/**/*.js'],
+				tasks: ['js']
 			}
 		},
 
@@ -31,6 +36,25 @@ module.exports = function(grunt) {
 			}
 		},
 
+		jshint: {
+			dist: ['static/js/**/*.js'],
+			gruntfile: ['Gruntfile.js']
+		},
+
+		uglify: {
+			dist: {
+				options: {
+					sourceMap: true
+				},
+				files: {
+					'static/dist/app.js': [
+						'static/js/geo.js'
+					],
+					'static/dist/maps.js': 'static/js/maps.js'
+				}
+			}
+		},
+
 		clean: {
 			options: {
 				force: true
@@ -39,5 +63,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.registerTask('default', ['clean', 'postcss']);
+	grunt.registerTask('css', ['postcss']);
+	grunt.registerTask('js', ['jshint', 'uglify']);
+	grunt.registerTask('default', ['clean', 'css', 'js']);
 };

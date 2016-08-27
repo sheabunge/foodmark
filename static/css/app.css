@@ -30,7 +30,6 @@ body {
 
 .site-header .container {
 	padding: 20px;
-//	background: rgba(241,241,241,0.7);
 	background: #fff;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.13);
 	border-radius: 10px;
@@ -48,13 +47,30 @@ body {
 
 .winter {
 	color: #0074D9;
+
+	&:hover {
+		color: #001f3f !important;
+	}
 }
 .spring {
 	color: #2ECC40;
+
+	&:hover {
+		color: #3D9970 !important;
+	}
 }
 .autumn {
 	color: #FF851B;
+
+	&:hover {
+		color: #FF4136 !important;
+	}
 }
 .summer {
 	color: #ccac00;
+
+	&:hover {
+		color: #FFDC00 !important;
+	}
 }
+
