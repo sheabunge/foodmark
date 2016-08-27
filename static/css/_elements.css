@@ -45,11 +45,4 @@ input[type=submit], button {
 	}
 }
 
-input, button {
-    display: block;
-    padding: 15px;
-    margin: 20px 0;
-    width: 100%;
-}
-
 

@@ -2,22 +2,28 @@
 .site-footer {
 	text-align: center;
 	letter-spacing: 1px;
-	padding-bottom: 2em;
+	margin-top: 30px;
 	width: 100%;
 }
 
 .site-footer .navigation {
 
 	ul {
-		display: flex;
-		flex-flow: row;
 		list-style: none;
-		justify-content: center;
+
+		box-shadow: 0 1px 3px rgba(0,0,0,0.13);
+		border-radius: 10px;
+		background: white;
+	}
+
+	li {
+		border-left: 1px solid #efefef;
 	}
 }
 
 .site-footer .social-icons {
 	font-size: 2em;
+	padding-top: 1em;
 
 	a {
 		padding: 0 .5em;

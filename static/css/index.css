@@ -1,25 +1,43 @@
 
-
-.site-header .container {
-    margin-bottom: 0;
-}
-
-.site-footer {
-    padding-top: 0;
+main {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .search {
     display: flex;
-    flex-flow: row;
-    height: 50px;
+    justify-content: space-between;
 
-    input, button {
-        display: inline-block;
-        height: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px 20px;
+    height: 50px;
+    width: 70%;
+
+    border-radius: 9px;
+
+    input {
+        border: 2px solid red;
+        flex: 1;
     }
 
     button[type=submit] {
-        width: 50px;
-        border-radius: 0 6px 6px 0;
+        color: #333;
+        vertical-align: middle;
+    }
+
+    input, button {
+        border: none;
+        background: none;
+        box-shadow: none;
+        font-size: 1.4rem;
+    }
+
+    input {
+        vertical-align: top;
+        margin-top: 5px;
     }
 }
+
