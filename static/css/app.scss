@@ -2,6 +2,8 @@
 @import 'normalize';
 @import 'variables';
 
+@import '../../bower_components/font-awesome/scss/font-awesome';
+
 @import 'elements';
 @import 'typography';
 
@@ -53,32 +55,17 @@ body {
 	width: 300px;
 }
 
-.winter {
-	color: #0074D9;
+$seasons:
+	'winter' '#0074D9' '#001f3f',
+	'spring' '#2ECC40' '#3D9970',
+	'autumn' '#FF851B' '#FF4136',
+	'summer' '#ccac00' '#FFDC00';
 
-	&:hover {
-		color: #001f3f !important;
-	}
-}
-.spring {
-	color: #2ECC40;
+@each $season in $seasons {
 
-	&:hover {
-		color: #3D9970 !important;
-	}
-}
-.autumn {
-	color: #FF851B;
-
-	&:hover {
-		color: #FF4136 !important;
-	}
-}
-.summer {
-	color: #ccac00;
-
-	&:hover {
-		color: #FFDC00 !important;
+	.#{nth($season, 1)} {
+		color: #{nth($season, 2)} !important;
+		&:hover { color: #{nth($season, 2)} !important; }
 	}
 }
 

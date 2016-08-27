@@ -72,10 +72,20 @@ module.exports = function(grunt) {
 				force: true
 			},
 			dist: ['static/dist/']
+		},
+
+		copy: {
+			font_awesome: {
+				expand: true,
+				flatten: true,
+				cwd: 'bower_components/font-awesome/fonts',
+				src: '**',
+				dest: 'static/dist'
+			}
 		}
 	});
 
 	grunt.registerTask('css', ['sass', 'postcss']);
 	grunt.registerTask('js', ['jshint', 'uglify']);
-	grunt.registerTask('default', ['clean', 'css', 'js']);
+	grunt.registerTask('default', ['clean', 'css', 'js', 'copy']);
 };
