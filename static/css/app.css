@@ -46,10 +46,15 @@ body {
 	width: 300px;
 }
 
-.container {
-
+.winter {
+	color: #0074D9;
 }
-
-main {
-
+.spring {
+	color: #2ECC40;
+}
+.autumn {
+	color: #FF851B;
+}
+.summer {
+	color: #ccac00;
 }
