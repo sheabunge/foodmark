@@ -2,19 +2,24 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>FoodMark</title>
-    {% include partials/head_meta.html %}
+    <title>Food Mark</title>
+    {% include 'partials/head_meta.html' %}
     <link href="/static/dist/index.css" rel="stylesheet">
 </head>
 <body>
 
-{% include partials/header.html %}
+{% include 'partials/header.html' %}
 
 <main>
 
+        <form class="search" method="get" action="/search">
+            <input type="search" placeholder="I would like &hellip;" name="search" value="{% if query %}{{ query }}{% endif %}">
+	        <button type="submit"><span class="fa fa-search"></span></button>
+        </form>
+
 </main>
 
-{% include partials/footer.html %}
+{% include 'partials/footer.html' %}
 
 </body>
 </html>

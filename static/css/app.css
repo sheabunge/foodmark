@@ -7,10 +7,6 @@
 	box-sizing: border-box;
 }
 
-body {
-	margin-bottom: 100px;
-}
-
 .container, main {
 	max-width: 1200px;
 	margin: 0 auto;
