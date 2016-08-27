@@ -7,37 +7,30 @@ main {
 }
 
 .search {
-    display: flex;
-    justify-content: space-between;
-
     margin: 0 auto;
     background: #fff;
     padding: 10px 20px;
-    height: 50px;
-    width: 70%;
-
     border-radius: 9px;
+    width: 700px;
 
     input {
-        border: 2px solid red;
-        flex: 1;
+        vertical-align: top;
+        margin-top: 5px;
+        outline: none;
+        width: 90%;
     }
 
-    button[type=submit] {
+    button {
         color: #333;
-        vertical-align: middle;
+        vertical-align: baseline;
     }
 
     input, button {
         border: none;
         background: none;
         box-shadow: none;
-        font-size: 1.4rem;
-    }
-
-    input {
-        vertical-align: top;
-        margin-top: 5px;
+        font-size: 2.5rem;
+        padding: 20px 5px;
     }
 }
 
