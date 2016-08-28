@@ -1,10 +1,9 @@
 
 var initMap = function () {
 
-    var location = { lat: -42.881973, lng: 147.3281693 };
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: location
+        zoom: 15,
+        center: mapLocation
     });
 
     var markers = [];
@@ -22,7 +21,7 @@ var addMarker = function (location, map, item) {
 	var markerIcon = {
 		url: '/static/images/mark.png',
 		origin: new google.maps.Point(0, 0),
-		anchor: new google.maps.Point(42, 66)
+		anchor: new google.maps.Point(28, 46)
 	};
 
 	var marker = new google.maps.Marker({

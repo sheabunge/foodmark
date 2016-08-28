@@ -40,7 +40,7 @@ body {
 	margin: 0 auto;
 }
 
-.site-header .container {
+.site-header .container, .produce {
 	padding: 20px;
 	background: #fff;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.13);
@@ -70,9 +70,24 @@ $seasons:
 	}
 }
 
-#ground {
+.ground {
 	margin-top: -30px;
 	z-index: -99;
-	height: 90px;
 	width: 100%;
+}
+
+
+h1, h2, h3 {
+    text-align: center;
+    color: #3D9970;
+	margin: 2em auto 0;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+#map {
+    margin-top: 2em;
+    height: 500px;
 }

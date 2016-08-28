@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Food Mark</title>
     {% include 'partials/head_meta.html' %}
-    <link href="/static/dist/index.css" rel="stylesheet">
+    <link href="/static/dist/single.css" rel="stylesheet">
 </head>
 <body>
 
@@ -12,15 +12,27 @@
 
 <main>
 
-<section class="produce box container">
-	<h2>{{ item.title }}</h2>
+	<section class="produce container" style="text-align: center;">
+		<h2>{{ item.type }}{% if item.species %} - {{ item.species }}{% endif %}</h2>
 
-	<p>Category: {{ item.category }}</p>
-</section>
+		<p>{{ item.desc }}</p>
+
+		<p>{{ item.quantity }} available for ${{ item.price }} </p>
+	</section>
+
+	<h2>Marks Nearby</h2>
+
+	<div id="map"></div>
 
 </main>
 
 {% include 'partials/footer.html' %}
+
+<script>
+	var mapLocation = { 'lat': {{ item.lat }}, 'lng': {{ item.long }} };
+</script>
+
+{% include 'partials/map_meta.html' %}
 
 </body>
 </html>

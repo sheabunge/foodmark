@@ -12,16 +12,30 @@
 
 <main>
 
-<form class="search" method="get" action="/search">
-	<input type="text" placeholder="What are you looking for?" name="search" value="{% if query %}{{ query }}{% endif %}">
-	<button type="submit"><span class="fa fa-search"></span></button>
-</form>
+	<div class="intro">
+		<h1 class="big" style="font-size: 60px;">Food Mark</h1>
+		<span>is a way to buy</span>
+		<h1 class="big">fresh produce</h1>
+		<span>from local sellers</span>
+		<h1 class="big">near you</h1>
+	</div>
 
-<div id="map"></div>
+	<form class="search" method="get" action="/search">
+		<input type="text" placeholder="What are you looking for?" name="search" value="{% if query %}{{ query }}{% endif %}">
+		<button type="submit"><span class="fa fa-search"></span></button>
+	</form>
+
+	<h1>Local marks near you</h1>
+
+	<div id="map"></div>
 
 </main>
 
 {% include 'partials/footer.html' %}
+
+<script>
+	var mapLocation = { lat: -42.881973, lng: 147.3281693 };
+</script>
 
 {% include 'partials/map_meta.html' %}
 </body>

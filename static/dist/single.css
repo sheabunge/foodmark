@@ -1,2 +1,2 @@
-main{display:block}
+main{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-flow:column;flex-flow:column;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.produce{width:700px}
 /*# sourceMappingURL=single.css.map */

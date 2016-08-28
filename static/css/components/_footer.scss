@@ -16,7 +16,7 @@
 		background: white;
 	}
 
-	li {
+	li:not(:first-of-type) {
 		border-left: 1px solid #efefef;
 	}
 }

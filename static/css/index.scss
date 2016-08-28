@@ -34,7 +34,16 @@ main {
     }
 }
 
-#map {
-    margin-top: 2em;
-    height: 500px;
+.intro {
+    text-align: center;
+    color: #3D9970;
+    padding: 1em;
+            font-size: 30px;
+
+    h1 {
+            padding-bottom: 0;
+    margin-bottom: 0;
+margin-top: 0;
+            font-size: 50px;
+    }
 }

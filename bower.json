@@ -13,6 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "~4.6.3"
+    "font-awesome": "~4.6.3",
+    "bootstrap": "v4-dev"
   }
 }

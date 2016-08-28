@@ -43,7 +43,10 @@ def produce_handler(response, produce_id):
 		error_handler(response)
 		return
 
+	context['json'] = json
 	context['item'] = produce
+	context['produce'] = all_produce.produce
+
 	render_page('single.html', response, context)
 
 
