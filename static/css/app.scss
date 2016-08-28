@@ -73,8 +73,5 @@ $seasons:
 #ground {
 	margin-top: -30px;
 	z-index: -99;
-
-	.night & {
-		margin-top: 34px;
-	}
+	width: 100%;
 }
