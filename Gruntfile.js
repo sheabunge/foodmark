@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 		watch: {
 
 			css: {
-				files: ['static/css/**/*.css'],
+				files: ['static/css/**/*.scss'],
 				tasks: ['css']
 			},
 
@@ -75,6 +75,13 @@ module.exports = function(grunt) {
 		},
 
 		copy: {
+			bootstrap: {
+				expand: true,
+				flatten: true,
+				cwd: 'bower_components/bootstrap/dist',
+				src: '**/*.min.*',
+				dest: 'static/dist'
+			},
 			font_awesome: {
 				expand: true,
 				flatten: true,
