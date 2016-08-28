@@ -1,19 +1,18 @@
-import json
+import csv
 
 
 class Produce:
 
-	def __init__(self, produce):
-		self.produce = produce
+	def __init__(self):
+		self.produce = [item for item in load_data('produce')]
 
 	def find_id(self, produce_id):
 		return self.produce[produce_id]
 
 
 def load_data(filename):
-	file = open('data/{}.json'.format(filename))
-	return json.load(file)
+	file = open('data/{}.csv'.format(filename))
+	return csv.DictReader(file)
 
-
-all_produce = Produce(load_data('produce'))
+all_produce = Produce()
 

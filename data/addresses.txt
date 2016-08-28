@@ -1,6 +1,6 @@
-91-93 Macquarie St, Hobart TAS 7000
-364A Elizabeth St, North Hobart TAS 7000
-23 Sandy Bay Rd, Hobart TAS 7000
-61 Hampden Road Battery Point  TAS  7004
-93 Bathurst Street Hobart  TAS  7000 
-2 Cooper St, Glenorchy TAS 7010
+91-93 Macquarie St, Hobart TAS 7000, -42.8819495,147.3281639
+364A Elizabeth St, North Hobart TAS 7000, -42.8740383,147.3138578
+23 Sandy Bay Rd, Hobart TAS 7000, -42.886763,147.3260344
+61 Hampden Road Battery Point  TAS  7004, -42.8896338,147.3310484
+93 Bathurst Street Hobart  TAS  7000, -42.8809833,147.3227955
+2 Cooper St, Glenorchy TAS 7010, -42.8346269,147.2739827

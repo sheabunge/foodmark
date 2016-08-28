@@ -1,0 +1,7 @@
+type,species,desc,rating,quantity,sold,price,image,trader,location
+Apples,Pink Lady,on the tree,4,7,15,3.5, apples.png,Farmer Joe,"-42.8819495,147.3281639"
+Lettuce,Iceburg,freshly picked,5,5,12,7,lettuce.png,Fred Bloggs,"-42.8740383,147.3138578"
+Carrots,,perfect for juicing,2,9,0,2,carrots.png,Granny Smith,"-42.886763,147.3260344"
+Manure,Chicken,"5kg bags, perfect for the garden",3,7,5,10,manure.png,Farmer Joe,"-42.8896338,147.3310484"
+Lemons,,great for lemonade,1,50,20,,lemons.png,Cletus Spuckler,"-42.8809833,147.3227955"
+Corn,,lovely juicy corn on the cob. Perfect for eating fresh,5,3,2,2,corn.png,Farmer Maggot,"-42.8346269,147.2739827"
