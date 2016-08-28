@@ -3,15 +3,21 @@
     'use strict';
 
     var toggleButton = document.querySelector('.toggle-night');
+    var classes = document.body.classList;
+    var ground = document.getElementById('ground');
 
     var setDay = function () {
         toggleButton.innerHTML = '<span class="fa fa-moon-o"></span>';
-        document.body.classList.remove('night').add('day');
+        classes.remove('night');
+        classes.add('day');
+        ground.src = '/static/images/ground.svg';
     };
 
     var setNight = function () {
         toggleButton.innerHTML = '<span class="fa fa-sun-o"></span>';
-        document.body.classList.remove('day').add('night');
+        classes.remove('day');
+        classes.add('night');
+        ground.src = '/static/images/ground-night.svg';
     };
 
     toggleButton.onclick = function () {
@@ -21,6 +27,6 @@
             setNight();
         }
     };
-    
+
     setDay();
 })();
