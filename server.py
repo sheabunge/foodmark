@@ -1,4 +1,5 @@
 import os
+import json
 
 from tornado.server import Server
 from data.data import all_produce
@@ -20,7 +21,12 @@ def render_page(filename, response, context):
 
 
 def index_handler(response):
-	render_page('index.html', response, {})
+	context = {
+		'produce': all_produce.produce,
+		'json': json
+	}
+
+	render_page('index.html', response, context)
 
 
 def search_handler(response):
