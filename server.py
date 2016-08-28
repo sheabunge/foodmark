@@ -30,14 +30,15 @@ def search_handler(response):
 
 def produce_handler(response, produce_id):
 	context = {}
+	produce_id = int(produce_id)
 	produce = all_produce.find_id(produce_id)
 
 	if not produce:
 		error_handler(response)
 		return
 
-	context['produce'] = produce
-	render_page('produce.html', response, context)
+	context['item'] = produce
+	render_page('single.html', response, context)
 
 
 def error_handler(response):
