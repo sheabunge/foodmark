@@ -55,21 +55,25 @@ def error_handler(response):
 	render_page('404.html', response, {})
 
 
+def diary_handler(response):
+	render_page('diary.html', response, {})
+
+
 def dashboard_handler(response):
 
 	widgets = [
-		('Messages', 'messages', 'account/messages'),
-		('Profile', 'profile', 'account/profile'),
-		('My Marks', 'my-marks', 'account/marks'),
 		('My Patch', 'my-patch', 'account/patch'),
-		('Mark Favs', 'mark-favs', 'account/mark-favs'),
+		('Messages', 'messages', '#'),
+		('Profile', 'profile', '#'),
+		('My Marks', 'my-marks', '#'),
+		('Mark Favs', 'mark-favs', '#'),
 		('Community', 'social-community', '#'),
-		('Food Favs', 'food-favs', 'account/food-favs'),
-		('History', 'my-history', 'account/history'),
+		('Food Favs', 'food-favs', '#'),
+		('History', 'my-history', '#'),
 		('Food for Thought', 'food-for-thought', '#'),
-		('Research', 'research', 'research'),
+		('Research', 'research', '#'),
 		('Market Analytics', 'market-analytics', '#'),
-		('Account Settings', 'settings', 'account/settings'),
+		('Account Settings', 'settings', '#'),
 	]
 
 	render_page('dashboard.html', response, {'widgets': widgets})
@@ -85,5 +89,7 @@ if __name__ == '__main__':
 	server.register(r'/produce/(\d+)/?', produce_handler)
 
 	server.register(r'/account/dashboard/?', dashboard_handler)
+	server.register(r'/account/patch/?', diary_handler)
+
 	server.register(r'/.*', error_handler)
 	server.run()
