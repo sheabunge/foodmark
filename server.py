@@ -73,7 +73,9 @@ def dashboard_handler(response):
 
 
 if __name__ == '__main__':
-	server = Server()
+	port = os.environ.get('PORT', 8888)
+	server = Server(port=port)
+
 	server.register(r'/', index_handler)
 
 	server.register(r'/produce/search/?', search_handler)
