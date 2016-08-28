@@ -1,5 +1,11 @@
 
-__pycache__
 node_modules/
 bower_components/
+
+
+__pycache__
+*.pyc
+.*.sw[opq]
 /venv/
+
+.idea/
