@@ -17,7 +17,7 @@
 	<div class="dashboard">
 	{% for label, icon, url in widgets %}
 
-		<a href="/{{ url }}">
+		<a href="{{ url }}">
 			<img src="/static/images/dashboard-icons/{{ icon }}.svg" alt="{{ label }} icon">
 			<h2>{{ label }}</h2>
 		</a>

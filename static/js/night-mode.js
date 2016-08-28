@@ -4,7 +4,7 @@
 
     var toggleButton = document.querySelector('.toggle-night');
     var classes = document.body.classList;
-    var ground = document.getElementById('ground');
+    var ground = document.querySelector('.ground');
 
     var setDay = function () {
         toggleButton.innerHTML = '<span class="fa fa-moon-o"></span>';

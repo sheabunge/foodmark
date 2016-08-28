@@ -62,7 +62,7 @@ def diary_handler(response):
 def dashboard_handler(response):
 
 	widgets = [
-		('My Patch', 'my-patch', 'account/patch'),
+		('My Patch', 'my-patch', '/account/patch'),
 		('Messages', 'messages', '#'),
 		('Profile', 'profile', '#'),
 		('My Marks', 'my-marks', '#'),
